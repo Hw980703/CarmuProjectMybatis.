@@ -1,0 +1,754 @@
+   /* @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;400&family=Nanum+Brush+Script&family=Nanum+Myeongjo:wght@400;700&family=Sunflower:wght@500&family=Yeon+Sung&display=swap'); */
+         
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+            *{
+                box-sizing: border-box;
+                border-collapse: collapse;
+                margin : 0 auto;
+                font-family: 'Noto Sans KR', sans-serif;
+              
+            }
+            #csnotice{
+                position: relative;
+                z-index: 10;
+                left: 150px;
+                display: none;
+            }
+        
+            div{
+                --border : 1px solid black;
+                width: 1200px;
+                height: 1000px;
+                --margin : 0 auto;
+                box-sizing: border-box;
+                border-collapse: collapse;
+                
+                margin : 0 auto;
+            }
+            #title {
+                --border : 1px solid black;
+                width: 100%;
+                height: 20%;
+            }
+                #titleImg-2{
+                    padding-top: 40px;
+                }
+            #logo {
+                --border:1px solid black;
+                width: 16%;
+                height: 100%;
+                float: left;
+                padding: 0;
+            }
+                #logoImg {
+                    --padding-left: 10px;
+                    margin-top : 30px;
+                    padding-right: 20px;
+                   
+
+                }
+            #titleMain{
+                --border : 1px solid red;
+                width: 84%;
+                height: 100%;
+                float: left;
+            }
+            #titleImg{
+                --border : 1px solid green;
+                width: 70%;
+                height: 100%;
+                float: left;
+            }
+            #menu{
+                --border : 1px solid blue;
+                width: 30%;
+                height: 100%;
+                float: left;
+            }
+                #menuTag {
+                    --border : 1px solid #ccc;
+                    width: 100%;
+                    --background-color: rgba(255, 255, 255, 0.3);
+                    border-radius: 7%;
+                    height: 40%;
+                    margin-top:75px;
+                    margin-left:0px;
+                    text-align: center;
+                    
+
+               
+                       
+                }
+                    #menuUl{
+                        width: 100%;
+                        height: 100%;
+                        padding : 0;
+                        
+                        text-align: center;
+                        display : flex;
+                        justify-content: space-around;
+                        color : black;
+                    }
+                        #menuUl li {
+                            margin : 0 auto;
+                            padding-top:10px;
+                            padding-right: 16px;
+                            font-size : 13px;
+                            font-weight: bold;
+                            font-family: 'Noto Sans KR', sans-serif;
+                            color : black;
+                        }
+                            #menuMy{
+                                border-right-style: none;
+                            }
+                            #menuUl li a:hover {
+                                    color:red;
+                                }
+                            #signUp{
+                                padding-right: 100px;
+                            }
+                           
+                /* #menuUl{
+                       
+                    
+                } */
+                    .menuClass{
+                        float: left;
+                        font-size: 11px;
+                        line-height: 2;
+                        padding: 0px;
+                        margin : 0px;
+                        margin-right: 2px;
+                        border-right:  1px solid #ccc;
+                    
+                        padding-right: 10px;
+
+                    }
+                         
+            #nav{
+                --border:3px solid rebeccapurple;
+                width: 100%;
+                height: 70%;
+                float: bottom;
+                --background-color: rgb(54, 71, 159);
+                --background-color: rgb(47, 48, 53);
+                --background-color: rgb(48, 48, 54);
+                margin-top:25px;
+                padding: 0;
+                --border-radius: 10%;
+                color : white;
+                z-index: -1px;
+                position: relative;
+              
+            }
+                #navTest{
+                    border : 1px solid black;
+                    width: 100%;
+                    height: 30%;
+                    background-color: black;
+                       z-index: -1px;
+                    position: relative;
+                }
+                  #category {
+                width: 100%;
+                height: 80%;
+                display: inline-block;
+                --background-color: black;
+               
+            }
+                .navaCtegory a{
+                    color:black;
+                }
+                .navaCtegory a:hover{
+                    color: skyblue;
+                }
+            #korCategory{
+                width: 16%;
+                height: 100px;
+                background-color: white;
+               
+                 z-index: -1px;
+                border : 1px solid black;
+                color : black;
+                font-size: 13px;
+                line-height: 25px;
+            
+                float: left;
+                padding-left: 5px;
+                opacity: 0;
+                transition: opacity 1s ease;
+            }
+            #globalCategory{
+                width: 16%;
+                height: 100px;
+                background-color: white;
+                z-index: 5;
+                margin-left: 5px;
+                border : 1px solid black;
+                color : black;
+                font-size: 13px;
+                line-height: 25px;
+                opacity: 0;
+                transition: opacity 1s ease;
+            
+                padding-left: 5px;
+                float: left;
+            }
+            #userCategory{
+                width: 16%;
+                height: 100px;
+                background-color: white;
+                z-index: 5;
+                margin-left: 5px;
+                border : 1px solid black;
+                color : black;
+                font-size: 13px;
+                line-height: 33px;
+                transition: opacity 1s ease;
+                opacity: 0;
+            float: left;
+                padding-left: 5px;
+            }
+            #lateCategory{
+                    width: 16%;
+                height: 100px;
+                background-color: white;
+                z-index: 5;
+                margin-left: 5px;
+                border : 1px solid black;
+                color : black;
+                font-size: 13px;
+                line-height: 40px;
+                float: left;
+                padding-left: 5px;
+                opacity: 0;
+                transition: opacity 1s ease;
+            }
+            #serviceCategory{
+                width: 16%;
+                height: 100px;
+                background-color: white;
+                z-index: 5;
+                margin-left: 5px;
+                border : 1px solid black;
+                color : black;
+                font-size: 13px;
+                line-height: 35px;
+                float: left;
+                padding-left: 5px;
+                opacity: 0;
+                transition: opacity 1s ease;
+            }
+            #myCategory{
+                width: 16%;
+                height: 100px;
+                background-color: white;
+                z-index: 5;
+                margin-left: 5px;
+                border : 1px solid black;
+                color : black;
+                font-size: 13px;
+                line-height: 40px;
+                float: left;
+                padding-left: 5px;
+                opacity: 0;
+                transition: opacity 1s ease;
+            }
+            #navul li{
+                float: left;
+                --padding: 5px;
+                text-align: center;
+                margin-right: 50px;
+                font-family: 'Noto Sans KR', sans-serif;
+                padding-top : 7px;
+                padding-right: 20px;
+                font-size: 15px;
+                font-weight: bolder;
+                color : white;
+                
+            }
+            #navul{
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                display: flex;
+                justify-content: space-between;
+                padding: 0;
+                color : white;
+                position: relative;
+                z-index: 8;
+                background-color: rgb(48, 48, 54);
+
+            }
+           
+              
+            #navul li a:hover{
+                color :yellow;
+            }
+          
+           
+            #title2{
+                height: 60%;
+                width: 100%;
+            }
+            #mainTag{
+                --border : 1px solid orange;
+                width: 100%;
+                height: 80%;
+                float: bottom;
+            }
+               
+           
+            #login{
+                width: 100%;
+                height: 15%;
+                border : 2px solid #ccc;
+                margin-top : 5px;
+                padding: 0px;
+              
+            
+            }
+                #login-top{
+                    --border-bottom: 1px solid #ccc;
+                    width: 100%;
+                    height: 70%;
+                    --margin-top : 5px;
+                    padding: 0px;
+                }
+
+                #login-bottom{
+                   --border : 1px solid deepskyblue;
+                    width: 100%;
+                    height: 30%;
+                    margin-top : 10px;
+                    margin-left: 0px;
+                }
+                    #login-bottom-footer{
+                        --border : 2px solid brown;
+                        height: 80%;
+                    }
+                        #login-bottom-footer a:hover {
+                            color : skyblue;
+                        }
+                    #footer-ul{
+                        padding: 0px;
+                    }
+                        #footer-ul li{
+                            float: left;
+                            list-style: none;
+                            --padding: 4px;
+                            --padding-right: 2px;
+                            padding: 0px;
+                            font-size: 15px;
+                            font-weight: bold;
+                            
+                        }
+                        #footer-IDPW{
+                            float: left;
+                            width: 50%;
+                            height: 100%;
+                            margin-left:17px;
+                           
+
+                        }
+                        #footer-signUp{
+                            width: 40%;
+                            height: 100%;
+                            float: left;
+                        }
+                #login-top-left{
+                    --border-bottom: 1px solid #ccc;
+                    --border : 2px solid green;
+                    width: 50%;
+                    float: left;
+                    height: 100%;
+                   
+                }
+                    #login-top-id{
+                        --border : 2px solid deeppink;
+                        height: 50%;
+                        
+                    }
+                        #user-id{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    #login-top-pw{
+                        --border : 2px solid dodgerblue;
+                        height: 50%;
+                    }
+                        #user-pw{
+                            width: 100%;
+                            height: 100%;
+                        }
+                #login-top-right{
+                    --border : 2px solid deepskyblue;
+                    width: 50%;
+                    float: left;
+                    height: 100%;
+                    font-size: 15px;
+                    font-weight: bold;
+                    --border-bottom: 1px solid #ccc;
+                   
+                  
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                    #login-top-loginBtn{
+                        --border: 0.1px solid deeppink;
+                        height: 100%;
+                        --border-radius: 20%;
+                    }
+                        #user-login{
+                            width: 100%;
+                            height: 100%;
+                            --margin-top : 10px;
+                            background-color: rgba(255, 255, 255, 0.829);
+                            --border-style: none;
+                            --border-width:0.1px;
+                            --border-top-right-radius: 7px;
+                            --border-bottom-right-radius: 7px;
+                        }
+            #search{
+                width: 100%;
+                height: 2%;
+                --border : 1px solid firebrick;
+                margin-top : px;
+                --border-left: 1px solid black;
+                --border-bottom: 2px solid #ccc;
+            }
+                #searchInput{
+                    width: 70%;
+                    height: 40px;
+                    margin-top: 8px;
+                    float: left;
+                }  
+                #searchBtn{
+                    float: left;
+                    width: 30%;
+                    height: 40px;
+                    margin-top :8px;
+                    background-color : rgb(124, 147, 155);
+                    --border-style: none;
+                    --color : whitesmoke;
+                    border : 1px solid black;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    
+                }
+                #side {
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                    --border : 1px solid #ccc;
+                    --border-top-style: none;
+                }
+            #writeMain{
+                width: 100%;
+                height: 77%;
+                --border : 5px solid blue;
+                margin-top : 45px;
+            }
+            #sideMain { 
+                width: 15%;
+                height: 100%;
+                --border : 1px solid red;
+                float: left;
+            }
+            #write{
+                width: 100%;
+                height:87%;
+                border : 1px solid black;
+           
+                border-top-style: none;
+                border-bottom-style: none;
+                line-height: 15px;
+             
+            }
+            .sideA{
+                    color: rgb(0, 0, 0,1);
+                    font-size: 13px;
+                }
+                .sideHtag{
+                    font-size: 5px;
+                }
+                #write h3 a{
+                    --text-decoration-line: underline;
+                    color : black;
+                }
+                #write h3 a:hover{
+                    color:deepskyblue
+                }
+                #write li a:hover {
+                    color :darkturquoise
+                }
+                #korCar{
+                    --border : 1px solid deeppink;
+                    width: 100%;
+                    height: 23%;
+                    
+                }
+                #korCarH3{
+                    --margin-top: 27px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-left: 10px;
+                    
+                    
+
+                }
+                    #korCarUl{
+                        padding: 0px;
+                        margin-top : 10px;
+                        margin-left: 10px;
+                    }
+                        #korCarUl li {
+                            padding: 3px;
+                        }
+                        #parkCarUl{
+                            padding: 0px;
+                            margin-top : 16px;
+                            margin-left: 10px;
+                          
+                        }
+                        #parkCarUl li{
+                            padding: 4px;
+                           
+                        }
+                #globalCar {
+                  
+                    --border : 1px solid black;
+                    width: 100%;
+                    height: 23%;
+                    
+                }
+                #user-park {
+                    --border : 1px solid black;
+                    width: 100%;
+                    height: 20%;
+                }
+                #customer {
+                    --border : 1px solid black;
+                    width: 100%;
+                    height: 15%;
+                }
+                    #customerUl {
+                        padding: 0px;
+                        margin-top : 13px;
+                        margin-left: 10px;
+                    }
+                    #customerUl li{
+                        padding: 4px;
+                    }
+                #user-service{
+                    --border : 1px solid black;
+                    width: 100%;
+                    height: 15%;
+                }
+            #sideBanner{
+                width: 100%;
+                height: 10.5%;
+                border : 1px solid black;
+                --margin-top : 10px;
+                border-top-style: none;
+                border-bottom-style: none;
+            }
+
+            #userSign{
+                border : 2px solid black;
+                width: 83%;
+                height: 100%;
+                float: left;
+                margin-top: 6px;
+                margin-left: 20px;
+            }
+                #loginTag{
+                     width: 98%;
+                    height: 98%;
+                    --border : 4px solid #eee;
+                    margin-top: 7px;
+                    --background-color: rgb(70, 130, 180,0.4);
+                    
+                }
+                    #myTitle{
+                        width: 100%;
+                        height: 10%;
+                        font-size: 15px;
+                        font-weight: bold;
+                        padding-top: 20px;
+                    }
+                        #myTitleTag{
+                            font-size: 20px;
+                        }
+                        #noticeTable{
+                            width: 100%;
+                            height: 70%;
+                            --background-color: aliceblue;
+                        
+                        }
+                            #noticeTable table{
+                                width: 100%;
+                                height: 100%;
+                                text-align: center;
+                            }
+                                #noticeTable th{
+                                    background-color:skyblue;
+                                }
+                                #noticeTable td{
+                                    font-size: 13px;
+                                }
+                                #noticeTable a{
+                                    color:black;
+                                }
+                                #noticeTable a:hover{
+                                    color:blue;
+                                }
+
+                    #noticeBtn{
+                        width: 100%;
+                        height: 7%;
+                        --background-color: beige;
+                        margin-top:20px;
+                        margin-left:150px;
+                    }
+                    .numberBtn {
+                        width: 100px;
+                        height: 40px;
+                        margin-left: 10px;
+                        background-color: white;
+                        color:black;
+                        border : 1px solid #ccc;
+                    }
+                        
+                                #noticeBtn7{
+                                    margin-left:  50px;
+                                    background-color: black;
+                                    width: 80px;
+                                    height: 40px;
+                                    color:white
+                                }
+                    #noticeBtn button:hover:not(#noticeBtn7){
+                       background-color: skyblue;
+                    }
+                        #noticesearch{
+                            width: 100%;
+                            height: 10%;
+                            --background-color:burlywood;
+                        }
+                        #noticesearch select{
+                            width: 10%;
+                            height: 50%;
+                            margin-left: 200px;
+                        }
+                        #noticesearch input{
+                            width: 40%;
+                            height: 50%;
+                        }
+                        #noticesearch button{
+                            width: 10%;
+                            height: 50%;
+                        }
+                    
+            #footer{
+                width: 100%;
+                height: 8%;
+                --border : 2px solid blue;
+                margin-top : 10px;
+                background-color: white;
+                border-top:  1px solid #ccc;
+            }
+            #footer-left{
+                width: 15%;
+                height: 100%;
+                --border : 2px solid yellow;
+                float: left;
+                border-right: 1px solid #ccc;
+              
+                
+            }
+             #footer-tel{
+                    width: 70%;
+                    height: 70%;
+                    --border:  1px solid #ccc;
+                    border-radius: 50%;
+                    --background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+                        #telImg{
+                            width: 100%;
+                            height: 100%;
+
+                            border-radius: 50%;
+                        }
+                #footer-left1{
+                    width: 40%;
+                    height: 100%;
+                    --border : 1px solid black;
+                    float: left;
+                       display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+                    #footer-left2{
+                    width: 60%;
+                    height: 100%;
+                    --border : 1px solid black;
+                    float: left;
+                    font-size: 9px;
+                    font-weight: bold;              
+                }
+            #footer-right{
+                width: 83.9%;
+                height: 100%;
+              
+                float: left;
+                margin-left : 7px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                text-align: center;
+                font-size: 14px;
+            }
+          
+           
+            #navul li{
+                list-style-type: none;
+               
+                
+            }
+            
+            a:link {
+                text-decoration: none;
+                --color:white;
+
+            }
+            a:link:visited{
+            --color: white;
+    
+        }
+        #navul a{
+            color : white;
+        }
+        #write li {
+            list-style-type: none;
+        }
+        #menuUl li{
+            list-style-type: none;
+        }
+        #menuUl a{
+            color :black;
+        }
+        #footer-IDPW a{
+            color :rgb(0, 0, 0,0.6);
+        }
+        #footer-signUp a{
+            color :rgb(0, 0, 0,0.6);
+        }
+       

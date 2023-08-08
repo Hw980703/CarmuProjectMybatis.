@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="korFreeBoard">
+  <resultMap type="freeboard.dmstcar.model.vo.dmstFreeBoard"
+		id="korFreeResultMaps">
+		<id property="korFreeBoardNo" column="NOTICE_NO" />
+		<result property="korFreeBoardSubject" column="NOTICE_SUBJECT" />
+		<result property="korFreeBoardContent" column="NOTICE_CONTENT" />
+		<result property="korFreeBoardWriter" column="NOTICE_WRITER" />
+		<result property="korFreeBoardDate" column="NOTICE_DATE" />
+		<result property="korFreeBoardGood" column="NOTICE_GOOD" />
+		<result property="korFreeBoardView" column="NOTICE_VIEW" />
+		<result property="korFreeBoardComment" column="NOTICE_COMMENT" />
+	</resultMap>
+  <insert id="writeKorFree">
+  	INSERT INTO korFreeBoard_TBL VALUES(SEO_NOTICENO.NEXTVAL,#{korFreeBoardSubject},#{korFreeBoardContent},#{korFreeBoardWriter},DEFAULT,DEFAULT,DEFAULT,DEFAULT)
+  </insert>
+  
+   
+  
+  <select id="selectList" resultMap="korFreeResultMaps">
+  	SELECT * FROM korFreeBoard_TBL
+  </select>
+  
+    <select id="selectDetailByNo" resultMap="korFreeResultMaps">
+  	SELECT * FROM korFreeBoard_TBL WHERE NOTICE_NO = #{korFreeBoardNo}
+  </select>
+  
+  <update id="korFreeChange">
+  UPDATE korFreeBoard_TBL SET NOTICE_SUBJECT = #{korFreeBoardSubject} , NOTICE_CONTENT = #{korFreeBoardContent} WHERE NOTICE_NO = #{korFreeBoardNo}
+  </update>
+  
+  <delete id="korFreeDelete">
+  DELETE FROM korFreeBoard_TBL WHERE NOTICE_NO = #{korFreeBoardNo}
+  </delete>
+  
+  
+  
+  </mapper>

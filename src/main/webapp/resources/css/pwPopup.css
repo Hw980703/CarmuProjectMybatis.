@@ -1,0 +1,101 @@
+*{
+    margin:0 auto;
+    box-sizing: border-box;
+}
+#idPop{
+    width: 500px;
+    height: 400px;
+    --background-color: skyblue;
+    border : 3px solid #eee;
+}
+    #topText{
+        width: 100%;
+        height: 15%;
+        --background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 23px;
+    }
+        #centerText{
+            width: 100%;
+            height: 25%;
+            background-color: #ccc;
+            margin-top: 10px;
+        }
+            #centerImg{
+                width: 30%;
+                height: 100%;
+                --background-color: aquamarine;
+                float: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+                #centerImg2{
+                    border-radius: 50%;
+                }
+            #centerRight{
+                width: 70%;
+                height: 100%;
+                --background-color:blanchedalmond;
+                float: left;
+                font-size: 20px;
+                
+            }
+                #idKH{
+                    text-decoration: underline;
+                }
+                    #kHText{
+                        padding-top: 20px;
+                    }
+            #centerBtn{
+                width: 100%;
+                height: 20%;
+                --background-color:blueviolet ;
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+                #centerBtn button{
+                    width: 150px;
+                    height: 40px;
+                    margin :0;
+                    background-color: skyblue;
+                    color: white
+                    
+                }
+            #footer{
+                width: 100%;
+                height: 30%;
+                --background-color:bisque ;
+                margin-top: 10px;
+            }
+                #footerImg{
+                    width: 40%;
+                    height: 100%;
+                    --background-color: black;
+                    float: left;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-right:1px solid #ccc;
+                }
+                    #serviceimg{
+                        border-radius: 50%;
+                    }
+                #footerText{
+                    width: 60%;
+                    height: 100%;
+                    --background-color:brown;
+                    float: left;
+                    padding-left: 20px;
+                    
+                }
+                    #footerH4{
+                        padding-top: 23px;
+                      
+                    }

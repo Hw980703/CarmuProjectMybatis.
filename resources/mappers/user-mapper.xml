@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="UserMapper">
+  <resultMap type="write.model.vo.Write"
+		id="noticeResultMaps">
+		<id property="noticeNo" column="NOTICE_NO" />
+		<result property="noticeSubject" column="NOTICE_SUBJECT" />
+		<result property="noticeContent" column="NOTICE_CONTENT" />
+		<result property="noticeWriter" column="NOTICE_WRITER" />
+		<result property="noticeDate" column="NOTICE_DATE" />
+		<result property="noticeGood" column="NOTICE_GOOD" />
+		<result property="noticeView" column="NOTICE_VIEW" />
+		<result property="noticeComment" column="NOTICE_COMMENT" />
+	</resultMap>
+  <insert id="writeKorFree">
+  	INSERT INTO korFreeBoard VALUES(SEO_NOTICENO.NEXTVAL,#{noticeSubject},#{noticeContent},#{noticeWriter},DEFAULT,DEFAULT,DEFAULT,DEFAULT)
+  </insert>
+  
+   
+  
+  <select id="selectList" resultMap="noticeResultMaps">
+  	SELECT * FROM korFreeBoard
+  </select>
+  
+  
+  
+  
+  
+  </mapper>

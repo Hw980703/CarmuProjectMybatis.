@@ -1,0 +1,23 @@
+#notice {
+    width: 300px;
+    height: 200px;
+    background-color:rgb(135, 206, 235,0.8);
+    font-size: 14px;
+    color : black;
+    border : 1px solid black;
+    /* position: relative;
+    z-index: 10;
+    left: 150px; */
+    
+ 
+}
+#notice a {
+    color : black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#notice0{
+    font-size:16px;
+    font-weight: bold;
+}

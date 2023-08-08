@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+      <mapper namespace="memberMappers">
+        <resultMap type="member.vo.Member"
+		id="Member">
+		<id property="memberId" column="MEMBER_ID" />
+		<result property="memberPw" column="MEMBER_PW" />
+		<result property="memberName" column="MEMBER_NAME" />
+		<result property="memberNicName" column="MEMBER_NICNAME" />
+		<result property="memberEmail" column="MEMBER_EMAIL" />
+		<result property="memberPhone" column="MEMBER_PHONE" />
+		<result property="memberDate" column="MEMBER_DATE"/>
+	</resultMap>
+      <delete id="memberDelete">
+      	DELETE FROM MEMBER_TBL WHERE MEMBER_ID = #{memberId}
+      </delete>
+      
+      <select id="selectMember" resultMap="Member">
+      	SELECT * FROM MEMBER_TBL WHERE MEMBER_ID = #{memberId}
+      </select>
+      
+      <insert id="insertMember">
+      	INSERT INTO MEMBER_TBL VALUES(#{memberId},#{memberPw},#{memberName},#{memberNicName},#{memberEmail},#{memberPhone},DEFAULT)
+      </insert>
+      
+          <select id="loginMember" resultMap="Member">
+      	SELECT * FROM MEMBER_TBL WHERE MEMBER_ID = #{memberId} AND MEMBER_PW = #{memberPw}
+      </select>
+      
+      <select id="selectOneById">
+      	SELECT * FROM MEMBER_TBL WHERE MEMBER_ID = #{memberId}
+      </select>
+      
+      <update id="updateNicName">
+      	UPDATE MEMBER_TBL SET MEMBER_NICNAME = #{memberNicName} WHERE MEMBER_ID = #{memberId}
+      </update>
+      
+      <update id="updatePhone">
+      	UPDATE MEMBER_TBL SET MEMBER_PHONE = #{memberPhone} WHERE MEMBER_ID = #{memberId}
+      </update>
+      
+      </mapper>
